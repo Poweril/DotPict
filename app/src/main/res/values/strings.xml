@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">DotPic</string>
+    <string name="my_gallery">My Gallery</string>
+    <string name="my_fave">My Fave</string>
+    <string name="title_activity_edit">activity_edit</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="picName">Kitty</string>
+    <string name="picSize">Size:</string>
+    <string name="dot">Dot!</string>
+</resources>

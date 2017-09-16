@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.houandli.dotpic.activity_edit"
+    tools:showIn="@layout/app_bar_activity_edit">
+
+    <GridLayout
+        android:id="@+id/canvas"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:columnCount="4"
+        android:rowCount="4"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp">
+
+        <ImageView
+            android:id="@+id/c1.1"
+            android:background="#0ff"
+            android:layout_width="@dimen/grid_4"
+            android:layout_height="@dimen/grid_4"/>
+        <ImageView
+            android:id="@+id/c1.2"
+            android:background="#0fe"
+            android:layout_width="@dimen/grid_4"
+            android:layout_height="@dimen/grid_4"/>
+        <ImageView
+            android:id="@+id/c1.3"
+            android:background="#0fd"
+            android:layout_width="@dimen/grid_4"
+            android:layout_height="@dimen/grid_4"/>
+        <ImageView
+            android:id="@+id/c1.4"
+            android:background="#0fc"
+            android:layout_width="@dimen/grid_4"
+            android:layout_height="@dimen/grid_4"/>
+
+        <ImageView
+            android:id="@+id/c2.1"
+            android:background="#0fb"
+            android:layout_width="@dimen/grid_4"
+            android:layout_height="@dimen/grid_4"/>
+        <ImageView
+            android:id="@+id/c2.2"
+            android:background="#0fa"
+            android:layout_width="@dimen/grid_4"
+            android:layout_height="@dimen/grid_4"/>
+        <ImageView
+            android:id="@+id/c2.3"
+            android:background="#0f9"
+            android:layout_width="@dimen/grid_4"
+            android:layout_height="@dimen/grid_4"/>
+        <ImageView
+            android:id="@+id/c2.4"
+            android:background="#0f8"
+            android:layout_width="@dimen/grid_4"
+            android:layout_height="@dimen/grid_4"/>
+
+        <ImageView
+            android:id="@+id/c3.1"
+            android:background="#0f7"
+            android:layout_width="@dimen/grid_4"
+            android:layout_height="@dimen/grid_4"/>
+        <ImageView
+            android:id="@+id/c3.2"
+            android:background="#0f6"
+            android:layout_width="@dimen/grid_4"
+            android:layout_height="@dimen/grid_4"/>
+        <ImageView
+            android:id="@+id/c3.3"
+            android:background="#0f5"
+            android:layout_width="@dimen/grid_4"
+            android:layout_height="@dimen/grid_4"/>
+        <ImageView
+            android:id="@+id/c3.4"
+            android:background="#0f4"
+            android:layout_width="@dimen/grid_4"
+            android:layout_height="@dimen/grid_4"/>
+
+        <ImageView
+            android:id="@+id/c4.1"
+            android:background="#0f3"
+            android:layout_width="@dimen/grid_4"
+            android:layout_height="@dimen/grid_4"/>
+        <ImageView
+            android:id="@+id/c4.2"
+            android:background="#0f2"
+            android:layout_width="@dimen/grid_4"
+            android:layout_height="@dimen/grid_4"/>
+        <ImageView
+            android:id="@+id/c4.3"
+            android:background="#0f1"
+            android:layout_width="@dimen/grid_4"
+            android:layout_height="@dimen/grid_4"/>
+        <ImageView
+            android:id="@+id/c4.4"
+            android:background="#0f0"
+            android:layout_width="@dimen/grid_4"
+            android:layout_height="@dimen/grid_4"/>
+
+    </GridLayout>
+
+    <Button
+        android:id="@+id/Btndot"
+        android:layout_width="0dp"
+        android:layout_height="81dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/dot"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
+
+    <RadioGroup
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/canvas"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/Btndot"
+        android:orientation="horizontal"
+        android:weightSum="16">
+
+        <RadioButton
+            android:id="@+id/pen_5"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/pen_5"
+            android:button="@null" />
+
+        <RadioButton
+            android:id="@+id/pen_6"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:background="@drawable/pen_6" />
+
+        <RadioButton
+            android:id="@+id/pen_7"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:background="@drawable/pen_7" />
+
+        <RadioButton
+            android:id="@+id/pen_8"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:background="@drawable/pen_8" />
+
+        <RadioButton
+            android:id="@+id/pen_9"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:background="@drawable/pen_9" />
+
+    </RadioGroup>
+</android.support.constraint.ConstraintLayout>

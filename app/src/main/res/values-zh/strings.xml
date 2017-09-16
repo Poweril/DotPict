@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">像素涂鸦</string>
+    <string name="my_gallery">我的作品集</string>
+    <string name="my_fave">我的最爱</string>
+
+    <string name="navigation_drawer_open">打开 navigation drawer</string>
+    <string name="navigation_drawer_close">关闭 navigation drawer</string>
+
+    <string name="action_settings">设置</string>
+</resources>
