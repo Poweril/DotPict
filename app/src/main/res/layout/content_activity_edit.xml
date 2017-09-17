@@ -26,106 +26,95 @@
         android:layout_marginEnd="8dp">
 
         <ImageView
-            android:id="@+id/c1.1"
+            android:id="@+id/c1_1"
             android:background="#0ff"
             android:layout_width="@dimen/grid_4"
-            android:layout_height="@dimen/grid_4" />
+            android:layout_height="@dimen/grid_4"
+            android:onClick="dot" />
         <ImageView
-            android:id="@+id/c1.2"
+            android:id="@+id/c1_2"
             android:background="#0fe"
             android:layout_width="@dimen/grid_4"
             android:layout_height="@dimen/grid_4"/>
         <ImageView
-            android:id="@+id/c1.3"
+            android:id="@+id/c1_3"
             android:background="#0fd"
             android:layout_width="@dimen/grid_4"
             android:layout_height="@dimen/grid_4"/>
         <ImageView
-            android:id="@+id/c1.4"
+            android:id="@+id/c1_4"
             android:background="#0fc"
             android:layout_width="@dimen/grid_4"
             android:layout_height="@dimen/grid_4"/>
 
         <ImageView
-            android:id="@+id/c2.1"
+            android:id="@+id/c2_1"
             android:background="#0fb"
             android:layout_width="@dimen/grid_4"
             android:layout_height="@dimen/grid_4"/>
         <ImageView
-            android:id="@+id/c2.2"
+            android:id="@+id/c2_2"
             android:background="#0fa"
             android:layout_width="@dimen/grid_4"
             android:layout_height="@dimen/grid_4"/>
         <ImageView
-            android:id="@+id/c2.3"
+            android:id="@+id/c2_3"
             android:background="#0f9"
             android:layout_width="@dimen/grid_4"
             android:layout_height="@dimen/grid_4"/>
         <ImageView
-            android:id="@+id/c2.4"
+            android:id="@+id/c2_4"
             android:background="#0f8"
             android:layout_width="@dimen/grid_4"
             android:layout_height="@dimen/grid_4"/>
 
         <ImageView
-            android:id="@+id/c3.1"
+            android:id="@+id/c3_1"
             android:background="#0f7"
             android:layout_width="@dimen/grid_4"
             android:layout_height="@dimen/grid_4"/>
         <ImageView
-            android:id="@+id/c3.2"
+            android:id="@+id/c3_2"
             android:background="#0f6"
             android:layout_width="@dimen/grid_4"
             android:layout_height="@dimen/grid_4"/>
         <ImageView
-            android:id="@+id/c3.3"
+            android:id="@+id/c3_3"
             android:background="#0f5"
             android:layout_width="@dimen/grid_4"
             android:layout_height="@dimen/grid_4"/>
         <ImageView
-            android:id="@+id/c3.4"
+            android:id="@+id/c3_4"
             android:background="#0f4"
             android:layout_width="@dimen/grid_4"
             android:layout_height="@dimen/grid_4"/>
 
         <ImageView
-            android:id="@+id/c4.1"
+            android:id="@+id/c4_1"
             android:background="#0f3"
             android:layout_width="@dimen/grid_4"
             android:layout_height="@dimen/grid_4"/>
         <ImageView
-            android:id="@+id/c4.2"
+            android:id="@+id/c4_2"
             android:background="#0f2"
             android:layout_width="@dimen/grid_4"
             android:layout_height="@dimen/grid_4"/>
         <ImageView
-            android:id="@+id/c4.3"
+            android:id="@+id/c4_3"
             android:background="#0f1"
             android:layout_width="@dimen/grid_4"
             android:layout_height="@dimen/grid_4"/>
         <ImageView
-            android:id="@+id/c4.4"
+            android:id="@+id/c4_4"
             android:background="#0f0"
             android:layout_width="@dimen/grid_4"
             android:layout_height="@dimen/grid_4"/>
 
     </GridLayout>
 
-    <Button
-        android:id="@+id/Btndot"
-        android:layout_width="0dp"
-        android:layout_height="81dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:text="@string/dot"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
-
     <RadioGroup
+        android:id="@+id/pens"
+        android:checkedButton="@+id/pen_5"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginRight="8dp"
@@ -146,7 +135,7 @@
             android:layout_weight="1"
             android:button="@null"
             android:background="@drawable/ic_pen_5"
-            android:onClick="pen_5" />
+            android:onClick="pens" />
 
         <RadioButton
             android:id="@+id/pen_6"
@@ -155,7 +144,7 @@
             android:layout_weight="1"
             android:button="@null"
             android:background="@drawable/ic_pen_6"
-            android:onClick="pen_6" />
+            android:onClick="pens" />
 
         <RadioButton
             android:id="@+id/pen_7"
@@ -164,7 +153,7 @@
             android:layout_weight="1"
             android:button="@null"
             android:background="@drawable/ic_pen_7"
-            android:onClick="pen_7" />
+            android:onClick="pens" />
 
         <RadioButton
             android:id="@+id/pen_8"
@@ -173,7 +162,7 @@
             android:layout_weight="1"
             android:button="@null"
             android:background="@drawable/ic_pen_8"
-            android:onClick="pen_8" />
+            android:onClick="pens" />
 
         <RadioButton
             android:id="@+id/pen_9"
@@ -182,7 +171,23 @@
             android:layout_weight="1"
             android:button="@null"
             android:background="@drawable/ic_pen_9"
-            android:onClick="pen_9" />
+            android:onClick="pens" />
 
     </RadioGroup>
+
+    <Button
+        android:id="@+id/Btndot"
+        android:layout_width="0dp"
+        android:layout_height="81dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/dot"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="Btndot" />
+
 </android.support.constraint.ConstraintLayout>

@@ -9,6 +9,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.RadioButton;
 
 public class activity_edit extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -63,22 +65,37 @@ public class activity_edit extends AppCompatActivity
 
     public static int currentColor;
 
-    public void pen_5(View view) {
-        currentColor = getResources().getColor(R.color.pen_5);
+    public void pens(View view) {
+        // Is the button now checked?
+        boolean checked = ((RadioButton) view).isChecked();
+
+        // Check which radio button was clicked
+        switch(view.getId()) {
+            case R.id.pen_5:
+                if (checked)
+                    currentColor = getResources().getColor(R.color.pen_5);
+                    break;
+            case R.id.pen_6:
+                if (checked)
+                    currentColor = getResources().getColor(R.color.pen_6);
+                break;
+            case R.id.pen_7:
+                if (checked)
+                    currentColor = getResources().getColor(R.color.pen_7);
+                break;
+            case R.id.pen_8:
+                if (checked)
+                    currentColor = getResources().getColor(R.color.pen_8);
+                break;
+            case R.id.pen_9:
+                if (checked)
+                    currentColor = getResources().getColor(R.color.pen_9);
+                break;
+        }
     }
-    public void pen_6(View view) {
-        currentColor = getResources().getColor(R.color.pen_6);
-    }
-    public void pen_7(View view) {
-        currentColor = getResources().getColor(R.color.pen_7);
-    }
-    public void pen_8(View view) {
-        currentColor = getResources().getColor(R.color.pen_8);
-    }
-    public void pen_9(View view) {
-        currentColor = getResources().getColor(R.color.pen_9);
-    }
-    public void pen_10(View view) {
-        currentColor = getResources().getColor(R.color.pen_10);
+
+    public void dot(View view){
+        ImageView c1_1 = (ImageView)findViewById(R.id.c1_1);
+        c1_1.setBackgroundColor(currentColor);
     }
 }
