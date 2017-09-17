@@ -15,6 +15,7 @@
         android:layout_height="wrap_content"
         android:columnCount="4"
         android:rowCount="4"
+        android:numColumns="auto_fit"
         android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -28,7 +29,7 @@
             android:id="@+id/c1.1"
             android:background="#0ff"
             android:layout_width="@dimen/grid_4"
-            android:layout_height="@dimen/grid_4"/>
+            android:layout_height="@dimen/grid_4" />
         <ImageView
             android:id="@+id/c1.2"
             android:background="#0fe"
@@ -143,8 +144,9 @@
             android:layout_height="wrap_content"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:background="@drawable/pen_5"
-            android:button="@null" />
+            android:button="@null"
+            android:background="@drawable/ic_pen_5"
+            android:onClick="pen_5" />
 
         <RadioButton
             android:id="@+id/pen_6"
@@ -152,7 +154,8 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:button="@null"
-            android:background="@drawable/pen_6" />
+            android:background="@drawable/ic_pen_6"
+            android:onClick="pen_6" />
 
         <RadioButton
             android:id="@+id/pen_7"
@@ -160,7 +163,8 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:button="@null"
-            android:background="@drawable/pen_7" />
+            android:background="@drawable/ic_pen_7"
+            android:onClick="pen_7" />
 
         <RadioButton
             android:id="@+id/pen_8"
@@ -168,7 +172,8 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:button="@null"
-            android:background="@drawable/pen_8" />
+            android:background="@drawable/ic_pen_8"
+            android:onClick="pen_8" />
 
         <RadioButton
             android:id="@+id/pen_9"
@@ -176,7 +181,8 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:button="@null"
-            android:background="@drawable/pen_9" />
+            android:background="@drawable/ic_pen_9"
+            android:onClick="pen_9" />
 
     </RadioGroup>
 </android.support.constraint.ConstraintLayout>

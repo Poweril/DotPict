@@ -8,6 +8,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
 
 public class activity_edit extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -58,5 +59,26 @@ public class activity_edit extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public static int currentColor;
+
+    public void pen_5(View view) {
+        currentColor = getResources().getColor(R.color.pen_5);
+    }
+    public void pen_6(View view) {
+        currentColor = getResources().getColor(R.color.pen_6);
+    }
+    public void pen_7(View view) {
+        currentColor = getResources().getColor(R.color.pen_7);
+    }
+    public void pen_8(View view) {
+        currentColor = getResources().getColor(R.color.pen_8);
+    }
+    public void pen_9(View view) {
+        currentColor = getResources().getColor(R.color.pen_9);
+    }
+    public void pen_10(View view) {
+        currentColor = getResources().getColor(R.color.pen_10);
     }
 }

@@ -12,4 +12,12 @@
     <string name="picName">Kitty</string>
     <string name="picSize">Size:</string>
     <string name="dot">Dot!</string>
+
+    <string name="canvas">Canvas</string>
+    <string name="rename">Rename</string>
+    <string name="clear">Clear</string>
+    <string name="export">Export</string>
+    <string name="share">Share</string>
+    <string name="other">Other</string>
+    <string name="settings">Settings</string>
 </resources>
