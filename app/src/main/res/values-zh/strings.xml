@@ -7,4 +7,24 @@
     <string name="navigation_drawer_close">关闭 navigation drawer</string>
 
     <string name="action_settings">设置</string>
+
+    <string name="picName">作品1</string>
+    <string name="picSize">画布尺寸:</string>
+    <string name="dot">点击!</string>
+
+    <string name="canvas">画布</string>
+    <string name="rename">重命名</string>
+    <string name="clear">清除</string>
+    <string name="export">导出</string>
+    <string name="share">分享</string>
+    <string name="other">其他</string>
+    <string name="settings">设置</string>
+    <string name="lang_set_title">选择语言</string>
+    <string-array name="lang_select">
+        <item>English</item>
+        <item>中文</item>
+    </string-array>
+    <string name="lang_set_ok">确定</string>
+    <string name="title_activity_edit">编辑</string>
+    <string name="lang_set_cancel">取消</string>
 </resources>

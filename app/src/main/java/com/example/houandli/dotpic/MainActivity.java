@@ -13,18 +13,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-        public void newPic(View view) {
-            Intent intent = new Intent(this, activity_edit.class);
-            startActivity(intent);
+    public void newPic(View view) {
+        Intent intent = new Intent(this, activity_edit.class);
+        startActivity(intent);
+    }
+    /*      Alter
+    FloatingActionButton newPic = (FloatingActionButton)findViewById(R.id.newPic);
+    newPic.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Intent editNew = new Intent(getApplicationContext(), activity_edit.class);
+            startActivity(editNew);
         }
-        /*      Alter
-        FloatingActionButton newPic = (FloatingActionButton)findViewById(R.id.newPic);
-        newPic.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent editNew = new Intent(getApplicationContext(), activity_edit.class);
-                startActivity(editNew);
-            }
-        );*/
+    );*/
 }
+
+
 

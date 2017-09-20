@@ -4,7 +4,6 @@
         android:drawable="@drawable/pen_5"
         android:state_checked="false">
     </item>
-
     <item
         android:drawable="@drawable/pen_5_"
         android:state_checked="true">
