@@ -24,10 +24,11 @@ import android.widget.Toast;
 import java.io.File;
 import java.util.Locale;
 
-import static com.example.houandli.dotpic.R.id.c1_1;
-
 public class activity_edit extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    RadioButton currentCell;
+    public static int currentColor ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -114,6 +115,8 @@ public class activity_edit extends AppCompatActivity
         c4_2.setBackgroundColor(cell4_2);
         c4_3.setBackgroundColor(cell4_3);
         c4_4.setBackgroundColor(cell4_4);
+        currentCell = (RadioButton) findViewById(R.id.c4_4);
+        currentColor = 0xffffffff;
     }
 
     @Override
@@ -217,7 +220,6 @@ public class activity_edit extends AppCompatActivity
         recreate();
     }
 
-    RadioButton currentCell;
     String CellName;
 
     public void cell(View view) {
@@ -226,10 +228,11 @@ public class activity_edit extends AppCompatActivity
 
         // Check which cell was clicked
         switch(view.getId()) {
-            case c1_1:
+            case R.id.c1_1:
                 if (checked)
                     currentCell =(RadioButton) findViewById(R.id.c1_1);
                     CellName = "c1_1";
+                break;
             case R.id.c1_2:
                 if (checked)
                     currentCell =(RadioButton) findViewById(R.id.c1_2);
@@ -238,66 +241,80 @@ public class activity_edit extends AppCompatActivity
             case R.id.c1_3:
                 if (checked)
                     currentCell =(RadioButton) findViewById(R.id.c1_3);
+                    CellName = "c1_3";
                 break;
             case R.id.c1_4:
                 if (checked)
                     currentCell =(RadioButton) findViewById(R.id.c1_4);
+                    CellName = "c1_4";
                 break;
 
             case R.id.c2_1:
                 if (checked)
                     currentCell =(RadioButton) findViewById(R.id.c2_1);
+                    CellName = "c2_1";
                 break;
             case R.id.c2_2:
                 if (checked)
                     currentCell =(RadioButton) findViewById(R.id.c2_2);
+                    CellName = "c2_2";
                 break;
             case R.id.c2_3:
                 if (checked)
                     currentCell =(RadioButton) findViewById(R.id.c2_3);
+                    CellName = "c2_3";
                 break;
             case R.id.c2_4:
                 if (checked)
                     currentCell =(RadioButton) findViewById(R.id.c2_4);
+                    CellName = "c2_4";
                 break;
 
             case R.id.c3_1:
                 if (checked)
                     currentCell =(RadioButton) findViewById(R.id.c3_1);
+                    CellName = "c3_1";
                 break;
             case R.id.c3_2:
                 if (checked)
                     currentCell =(RadioButton) findViewById(R.id.c3_2);
+                    CellName = "c3_2";
                 break;
             case R.id.c3_3:
                 if (checked)
                     currentCell =(RadioButton) findViewById(R.id.c3_3);
+                    CellName = "c3_3";
                 break;
             case R.id.c3_4:
                 if (checked)
                     currentCell =(RadioButton) findViewById(R.id.c3_4);
+                    CellName = "c3_4";
                 break;
 
             case R.id.c4_1:
                 if (checked)
                     currentCell =(RadioButton) findViewById(R.id.c4_1);
+                    CellName = "c4_1";
                 break;
             case R.id.c4_2:
                 if (checked)
                     currentCell =(RadioButton) findViewById(R.id.c4_2);
+                    CellName = "c4_2";
                 break;
             case R.id.c4_3:
                 if (checked)
                     currentCell =(RadioButton) findViewById(R.id.c4_3);
+                    CellName = "c4_3";
                 break;
             case R.id.c4_4:
                 if (checked)
                     currentCell =(RadioButton) findViewById(R.id.c4_4);
+                    CellName = "c4_4";
                 break;
         }
     }
 
-    public static int currentColor;
+
 
     public void pens(View view) {
         // Is the button now checked?
