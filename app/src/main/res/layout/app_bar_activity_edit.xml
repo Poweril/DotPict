@@ -23,11 +23,4 @@
     <include layout="@layout/content_activity_edit"
         android:id="@+id/include2" />
 
-    <ImageView
-        android:id="@+id/pen"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
-        android:layout_gravity="bottom|end"
-        android:src="@drawable/ic_pen" />
-
 </android.support.design.widget.CoordinatorLayout>

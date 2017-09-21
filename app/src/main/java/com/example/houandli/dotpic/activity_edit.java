@@ -16,7 +16,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -29,6 +31,10 @@ public class activity_edit extends AppCompatActivity
 
     RadioButton currentCell;
     public static int currentColor ;
+    int down_x = 0;
+    int down_y = 0;
+    int up_x = 0;
+    int up_y = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +55,7 @@ public class activity_edit extends AppCompatActivity
         SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
         Configuration config = getBaseContext().getResources().getConfiguration();
 
+        //use the canvas saved in SharedPreferences
         SharedPreferences pref = getSharedPreferences("test",0);
         Editor editor = pref.edit();
         RadioButton c1_1;
@@ -117,6 +124,35 @@ public class activity_edit extends AppCompatActivity
         c4_4.setBackgroundColor(cell4_4);
         currentCell = (RadioButton) findViewById(R.id.c4_4);
         currentColor = 0xffffffff;
+
+
+        //create a pen
+        FrameLayout frame = (FrameLayout) findViewById(R.id.canvas);
+        final penView ic_pen = new penView(activity_edit.this);
+        ic_pen.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent event) {
+
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        //where to start
+                        down_x = (int)event.getX();
+                        down_y = (int)event.getY();
+                        break;
+                    case MotionEvent.ACTION_MOVE:
+                        ic_pen.bitmapX = Math.round(event.getX() -   1) - down_x + up_x;
+                        ic_pen.bitmapY = Math.round(event.getY() - 128) - down_y + up_y;
+                        ic_pen.invalidate();
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        up_x = ic_pen.bitmapX;
+                        up_y = ic_pen.bitmapY;
+                        break;
+                }
+                return true;
+            }
+        });
+        frame.addView(ic_pen);
     }
 
     @Override
@@ -153,6 +189,74 @@ public class activity_edit extends AppCompatActivity
         if (id == R.id.rename) {
         }
         else if (id == R.id.clear) {
+            RadioButton c1_1;
+            RadioButton c1_2;
+            RadioButton c1_3;
+            RadioButton c1_4;
+            RadioButton c2_1;
+            RadioButton c2_2;
+            RadioButton c2_3;
+            RadioButton c2_4;
+            RadioButton c3_1;
+            RadioButton c3_2;
+            RadioButton c3_3;
+            RadioButton c3_4;
+            RadioButton c4_1;
+            RadioButton c4_2;
+            RadioButton c4_3;
+            RadioButton c4_4;
+            c1_1 = (RadioButton)findViewById(R.id.c1_1);
+            c1_2 = (RadioButton)findViewById(R.id.c1_2);
+            c1_3 = (RadioButton)findViewById(R.id.c1_3);
+            c1_4 = (RadioButton)findViewById(R.id.c1_4);
+            c2_1 = (RadioButton)findViewById(R.id.c2_1);
+            c2_2 = (RadioButton)findViewById(R.id.c2_2);
+            c2_3 = (RadioButton)findViewById(R.id.c2_3);
+            c2_4 = (RadioButton)findViewById(R.id.c2_4);
+            c3_1 = (RadioButton)findViewById(R.id.c3_1);
+            c3_2 = (RadioButton)findViewById(R.id.c3_2);
+            c3_3 = (RadioButton)findViewById(R.id.c3_3);
+            c3_4 = (RadioButton)findViewById(R.id.c3_4);
+            c4_1 = (RadioButton)findViewById(R.id.c4_1);
+            c4_2 = (RadioButton)findViewById(R.id.c4_2);
+            c4_3 = (RadioButton)findViewById(R.id.c4_3);
+            c4_4 = (RadioButton)findViewById(R.id.c4_4);
+            c1_1.setBackgroundColor(0xffffffff);
+            c1_2.setBackgroundColor(0xffffffff);
+            c1_3.setBackgroundColor(0xffffffff);
+            c1_4.setBackgroundColor(0xffffffff);
+            c2_1.setBackgroundColor(0xffffffff);
+            c2_2.setBackgroundColor(0xffffffff);
+            c2_3.setBackgroundColor(0xffffffff);
+            c2_4.setBackgroundColor(0xffffffff);
+            c3_1.setBackgroundColor(0xffffffff);
+            c3_2.setBackgroundColor(0xffffffff);
+            c3_3.setBackgroundColor(0xffffffff);
+            c3_4.setBackgroundColor(0xffffffff);
+            c4_1.setBackgroundColor(0xffffffff);
+            c4_2.setBackgroundColor(0xffffffff);
+            c4_3.setBackgroundColor(0xffffffff);
+            c4_4.setBackgroundColor(0xffffffff);
+            SharedPreferences pref = getSharedPreferences("test",0);
+            Editor editor = pref.edit();
+            editor = pref.edit();
+            editor.putInt("c1_1", 0xffffffff);
+            editor.putInt("c1_2", 0xffffffff);
+            editor.putInt("c1_3", 0xffffffff);
+            editor.putInt("c1_4", 0xffffffff);
+            editor.putInt("c2_1", 0xffffffff);
+            editor.putInt("c2_2", 0xffffffff);
+            editor.putInt("c2_3", 0xffffffff);
+            editor.putInt("c2_4", 0xffffffff);
+            editor.putInt("c3_1", 0xffffffff);
+            editor.putInt("c3_2", 0xffffffff);
+            editor.putInt("c3_3", 0xffffffff);
+            editor.putInt("c3_4", 0xffffffff);
+            editor.putInt("c4_1", 0xffffffff);
+            editor.putInt("c4_2", 0xffffffff);
+            editor.putInt("c4_3", 0xffffffff);
+            editor.putInt("c4_4", 0xffffffff);
+            editor.commit();
         }
         else if (id == R.id.export) {
             try {

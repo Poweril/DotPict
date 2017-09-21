@@ -1,344 +1,360 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.houandli.dotpic.activity_edit"
     tools:showIn="@layout/app_bar_activity_edit">
 
-    <GridLayout
+    <FrameLayout
         android:id="@+id/canvas"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:columnCount="4"
-        android:rowCount="4"
-        android:numColumns="auto_fit"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <GridLayout
+            android:id="@+id/canvas1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="4"
+            android:rowCount="4"
+            android:numColumns="auto_fit"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp">
+
+            <RadioGroup
+                android:checkedButton="@+id/c4_4"
+                android:orientation="vertical" >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RadioButton
+                        android:id="@+id/c1_1"
+                        android:background="@drawable/cell_square"
+                        android:button="@null"
+                        android:layout_width="@dimen/grid_4"
+                        android:layout_height="@dimen/grid_4"
+                        android:onClick="cell"/>
+                    <RadioButton
+                        android:id="@+id/c1_2"
+                        android:background="@drawable/cell_square"
+                        android:button="@null"
+                        android:layout_width="@dimen/grid_4"
+                        android:layout_height="@dimen/grid_4"
+                        android:onClick="cell"/>
+                    <RadioButton
+                        android:id="@+id/c1_3"
+                        android:background="@drawable/cell_square"
+                        android:button="@null"
+                        android:layout_width="@dimen/grid_4"
+                        android:layout_height="@dimen/grid_4"
+                        android:onClick="cell"/>
+                    <RadioButton
+                        android:id="@+id/c1_4"
+                        android:background="@drawable/cell_square"
+                        android:button="@null"
+                        android:layout_width="@dimen/grid_4"
+                        android:layout_height="@dimen/grid_4"
+                        android:onClick="cell"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RadioButton
+                        android:id="@+id/c2_1"
+                        android:background="@drawable/cell_square"
+                        android:button="@null"
+                        android:layout_width="@dimen/grid_4"
+                        android:layout_height="@dimen/grid_4"
+                        android:onClick="cell"/>
+                    <RadioButton
+                        android:id="@+id/c2_2"
+                        android:background="@drawable/cell_square"
+                        android:button="@null"
+                        android:layout_width="@dimen/grid_4"
+                        android:layout_height="@dimen/grid_4"
+                        android:onClick="cell"/>
+                    <RadioButton
+                        android:id="@+id/c2_3"
+                        android:background="@drawable/cell_square"
+                        android:button="@null"
+                        android:layout_width="@dimen/grid_4"
+                        android:layout_height="@dimen/grid_4"
+                        android:onClick="cell"/>
+                    <RadioButton
+                        android:id="@+id/c2_4"
+                        android:background="@drawable/cell_square"
+                        android:button="@null"
+                        android:layout_width="@dimen/grid_4"
+                        android:layout_height="@dimen/grid_4"
+                        android:onClick="cell"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RadioButton
+                        android:id="@+id/c3_1"
+                        android:background="@drawable/cell_square"
+                        android:button="@null"
+                        android:layout_width="@dimen/grid_4"
+                        android:layout_height="@dimen/grid_4"
+                        android:onClick="cell"/>
+                    <RadioButton
+                        android:id="@+id/c3_2"
+                        android:background="@drawable/cell_square"
+                        android:button="@null"
+                        android:layout_width="@dimen/grid_4"
+                        android:layout_height="@dimen/grid_4"
+                        android:onClick="cell"/>
+                    <RadioButton
+                        android:id="@+id/c3_3"
+                        android:background="@drawable/cell_square"
+                        android:button="@null"
+                        android:layout_width="@dimen/grid_4"
+                        android:layout_height="@dimen/grid_4"
+                        android:onClick="cell"/>
+                    <RadioButton
+                        android:id="@+id/c3_4"
+                        android:background="@drawable/cell_square"
+                        android:button="@null"
+                        android:layout_width="@dimen/grid_4"
+                        android:layout_height="@dimen/grid_4"
+                        android:onClick="cell"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RadioButton
+                        android:id="@+id/c4_1"
+                        android:background="@drawable/cell_square"
+                        android:button="@null"
+                        android:layout_width="@dimen/grid_4"
+                        android:layout_height="@dimen/grid_4"
+                        android:onClick="cell"/>
+                    <RadioButton
+                        android:id="@+id/c4_2"
+                        android:background="@drawable/cell_square"
+                        android:button="@null"
+                        android:layout_width="@dimen/grid_4"
+                        android:layout_height="@dimen/grid_4"
+                        android:onClick="cell"/>
+                    <RadioButton
+                        android:id="@+id/c4_3"
+                        android:background="@drawable/cell_square"
+                        android:button="@null"
+                        android:layout_width="@dimen/grid_4"
+                        android:layout_height="@dimen/grid_4"
+                        android:onClick="cell"/>
+                    <RadioButton
+                        android:id="@+id/c4_4"
+                        android:background="@drawable/cell_square"
+                        android:button="@null"
+                        android:layout_width="@dimen/grid_4"
+                        android:layout_height="@dimen/grid_4"
+                        android:onClick="cell"/>
+                </LinearLayout>
+            </RadioGroup>
+        </GridLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <RadioGroup
-            android:checkedButton="@+id/c4_4"
-            android:orientation="vertical" >
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <RadioButton
-                    android:id="@+id/c1_1"
-                    android:background="@drawable/cell_square"
-                    android:button="@null"
-                    android:layout_width="@dimen/grid_4"
-                    android:layout_height="@dimen/grid_4"
-                    android:onClick="cell"/>
-                <RadioButton
-                    android:id="@+id/c1_2"
-                    android:background="@drawable/cell_square"
-                    android:button="@null"
-                    android:layout_width="@dimen/grid_4"
-                    android:layout_height="@dimen/grid_4"
-                    android:onClick="cell"/>
-                <RadioButton
-                    android:id="@+id/c1_3"
-                    android:background="@drawable/cell_square"
-                    android:button="@null"
-                    android:layout_width="@dimen/grid_4"
-                    android:layout_height="@dimen/grid_4"
-                    android:onClick="cell"/>
-                <RadioButton
-                    android:id="@+id/c1_4"
-                    android:background="@drawable/cell_square"
-                    android:button="@null"
-                    android:layout_width="@dimen/grid_4"
-                    android:layout_height="@dimen/grid_4"
-                    android:onClick="cell"/>
-            </LinearLayout>
+            android:id="@+id/pens"
+            android:checkedButton="@+id/pen_16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/canvas"
+            app:layout_constraintBottom_toTopOf="@+id/Btndot"
+            android:orientation="horizontal"
+            android:weightSum="16">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <RadioButton
-                    android:id="@+id/c2_1"
-                    android:background="@drawable/cell_square"
-                    android:button="@null"
-                    android:layout_width="@dimen/grid_4"
-                    android:layout_height="@dimen/grid_4"
-                    android:onClick="cell"/>
-                <RadioButton
-                    android:id="@+id/c2_2"
-                    android:background="@drawable/cell_square"
-                    android:button="@null"
-                    android:layout_width="@dimen/grid_4"
-                    android:layout_height="@dimen/grid_4"
-                    android:onClick="cell"/>
-                <RadioButton
-                    android:id="@+id/c2_3"
-                    android:background="@drawable/cell_square"
-                    android:button="@null"
-                    android:layout_width="@dimen/grid_4"
-                    android:layout_height="@dimen/grid_4"
-                    android:onClick="cell"/>
-                <RadioButton
-                    android:id="@+id/c2_4"
-                    android:background="@drawable/cell_square"
-                    android:button="@null"
-                    android:layout_width="@dimen/grid_4"
-                    android:layout_height="@dimen/grid_4"
-                    android:onClick="cell"/>
-            </LinearLayout>
+            <RadioButton
+                android:id="@+id/pen_1"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:background="@drawable/ic_pen_1"
+                android:onClick="pens" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <RadioButton
-                    android:id="@+id/c3_1"
-                    android:background="@drawable/cell_square"
-                    android:button="@null"
-                    android:layout_width="@dimen/grid_4"
-                    android:layout_height="@dimen/grid_4"
-                    android:onClick="cell"/>
-                <RadioButton
-                    android:id="@+id/c3_2"
-                    android:background="@drawable/cell_square"
-                    android:button="@null"
-                    android:layout_width="@dimen/grid_4"
-                    android:layout_height="@dimen/grid_4"
-                    android:onClick="cell"/>
-                <RadioButton
-                    android:id="@+id/c3_3"
-                    android:background="@drawable/cell_square"
-                    android:button="@null"
-                    android:layout_width="@dimen/grid_4"
-                    android:layout_height="@dimen/grid_4"
-                    android:onClick="cell"/>
-                <RadioButton
-                    android:id="@+id/c3_4"
-                    android:background="@drawable/cell_square"
-                    android:button="@null"
-                    android:layout_width="@dimen/grid_4"
-                    android:layout_height="@dimen/grid_4"
-                    android:onClick="cell"/>
-            </LinearLayout>
+            <RadioButton
+                android:id="@+id/pen_2"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:background="@drawable/ic_pen_2"
+                android:onClick="pens" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <RadioButton
-                    android:id="@+id/c4_1"
-                    android:background="@drawable/cell_square"
-                    android:button="@null"
-                    android:layout_width="@dimen/grid_4"
-                    android:layout_height="@dimen/grid_4"
-                    android:onClick="cell"/>
-                <RadioButton
-                    android:id="@+id/c4_2"
-                    android:background="@drawable/cell_square"
-                    android:button="@null"
-                    android:layout_width="@dimen/grid_4"
-                    android:layout_height="@dimen/grid_4"
-                    android:onClick="cell"/>
-                <RadioButton
-                    android:id="@+id/c4_3"
-                    android:background="@drawable/cell_square"
-                    android:button="@null"
-                    android:layout_width="@dimen/grid_4"
-                    android:layout_height="@dimen/grid_4"
-                    android:onClick="cell"/>
-                <RadioButton
-                    android:id="@+id/c4_4"
-                    android:background="@drawable/cell_square"
-                    android:button="@null"
-                    android:layout_width="@dimen/grid_4"
-                    android:layout_height="@dimen/grid_4"
-                    android:onClick="cell"/>
-            </LinearLayout>
+            <RadioButton
+                android:id="@+id/pen_3"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:background="@drawable/ic_pen_3"
+                android:onClick="pens" />
+
+            <RadioButton
+                android:id="@+id/pen_4"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:background="@drawable/ic_pen_4"
+                android:onClick="pens" />
+
+            <RadioButton
+                android:id="@+id/pen_5"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:background="@drawable/ic_pen_5"
+                android:onClick="pens" />
+
+            <RadioButton
+                android:id="@+id/pen_6"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:background="@drawable/ic_pen_6"
+                android:onClick="pens" />
+
+            <RadioButton
+                android:id="@+id/pen_7"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:background="@drawable/ic_pen_7"
+                android:onClick="pens" />
+
+            <RadioButton
+                android:id="@+id/pen_8"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:background="@drawable/ic_pen_8"
+                android:onClick="pens" />
+
+            <RadioButton
+                android:id="@+id/pen_9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/ic_pen_9"
+                android:button="@null"
+                android:onClick="pens" />
+
+            <RadioButton
+                android:id="@+id/pen_10"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:background="@drawable/ic_pen_10"
+                android:onClick="pens" />
+
+            <RadioButton
+                android:id="@+id/pen_11"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:background="@drawable/ic_pen_11"
+                android:onClick="pens" />
+
+            <RadioButton
+                android:id="@+id/pen_12"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:background="@drawable/ic_pen_12"
+                android:onClick="pens" />
+
+            <RadioButton
+                android:id="@+id/pen_13"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:background="@drawable/ic_pen_13"
+                android:onClick="pens" />
+
+            <RadioButton
+                android:id="@+id/pen_14"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:background="@drawable/ic_pen_14"
+                android:onClick="pens" />
+
+            <RadioButton
+                android:id="@+id/pen_15"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:background="@drawable/ic_pen_15"
+                android:onClick="pens" />
+
+            <RadioButton
+                android:id="@+id/pen_16"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:background="@drawable/ic_pen_16"
+                android:onClick="pens" />
+
         </RadioGroup>
-    </GridLayout>
 
-    <RadioGroup
-        android:id="@+id/pens"
-        android:checkedButton="@+id/pen_16"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/canvas"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/Btndot"
-        android:orientation="horizontal"
-        android:weightSum="16">
-
-        <RadioButton
-            android:id="@+id/pen_1"
-            android:layout_height="wrap_content"
-            android:layout_width="0dp"
+        <Button
+            android:id="@+id/Btndot"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:button="@null"
-            android:background="@drawable/ic_pen_1"
-            android:onClick="pens" />
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/dot"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/textView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:onClick="dot" />
 
-        <RadioButton
-            android:id="@+id/pen_2"
-            android:layout_height="wrap_content"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:button="@null"
-            android:background="@drawable/ic_pen_2"
-            android:onClick="pens" />
-
-        <RadioButton
-            android:id="@+id/pen_3"
-            android:layout_height="wrap_content"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:button="@null"
-            android:background="@drawable/ic_pen_3"
-            android:onClick="pens" />
-
-        <RadioButton
-            android:id="@+id/pen_4"
-            android:layout_height="wrap_content"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:button="@null"
-            android:background="@drawable/ic_pen_4"
-            android:onClick="pens" />
-
-        <RadioButton
-            android:id="@+id/pen_5"
-            android:layout_height="wrap_content"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:button="@null"
-            android:background="@drawable/ic_pen_5"
-            android:onClick="pens" />
-
-        <RadioButton
-            android:id="@+id/pen_6"
-            android:layout_height="wrap_content"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:button="@null"
-            android:background="@drawable/ic_pen_6"
-            android:onClick="pens" />
-
-        <RadioButton
-            android:id="@+id/pen_7"
-            android:layout_height="wrap_content"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:button="@null"
-            android:background="@drawable/ic_pen_7"
-            android:onClick="pens" />
-
-        <RadioButton
-            android:id="@+id/pen_8"
-            android:layout_height="wrap_content"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:button="@null"
-            android:background="@drawable/ic_pen_8"
-            android:onClick="pens" />
-
-        <RadioButton
-            android:id="@+id/pen_9"
-            android:layout_height="wrap_content"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:button="@null"
-            android:background="@drawable/ic_pen_9"
-            android:onClick="pens" />
-        <RadioButton
-            android:id="@+id/pen_10"
-            android:layout_height="wrap_content"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:button="@null"
-            android:background="@drawable/ic_pen_10"
-            android:onClick="pens" />
-
-        <RadioButton
-            android:id="@+id/pen_11"
-            android:layout_height="wrap_content"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:button="@null"
-            android:background="@drawable/ic_pen_11"
-            android:onClick="pens" />
-
-        <RadioButton
-            android:id="@+id/pen_12"
-            android:layout_height="wrap_content"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:button="@null"
-            android:background="@drawable/ic_pen_12"
-            android:onClick="pens" />
-
-        <RadioButton
-            android:id="@+id/pen_13"
-            android:layout_height="wrap_content"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:button="@null"
-            android:background="@drawable/ic_pen_13"
-            android:onClick="pens" />
-
-        <RadioButton
-            android:id="@+id/pen_14"
-            android:layout_height="wrap_content"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:button="@null"
-            android:background="@drawable/ic_pen_14"
-            android:onClick="pens" />
-
-        <RadioButton
-            android:id="@+id/pen_15"
-            android:layout_height="wrap_content"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:button="@null"
-            android:background="@drawable/ic_pen_15"
-            android:onClick="pens" />
-
-        <RadioButton
-            android:id="@+id/pen_16"
-            android:layout_height="wrap_content"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:button="@null"
-            android:background="@drawable/ic_pen_16"
-            android:onClick="pens" />
-
-    </RadioGroup>
-
-    <Button
-        android:id="@+id/Btndot"
-        android:layout_width="0dp"
-        android:layout_height="81dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="@string/dot"
-        android:textColor="@color/colorPrimary"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:onClick="dot" />
-
-</android.support.constraint.ConstraintLayout>
+    </LinearLayout>
+</LinearLayout>
