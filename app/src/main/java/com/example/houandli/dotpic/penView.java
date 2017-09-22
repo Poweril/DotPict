@@ -38,5 +38,4 @@ public class penView extends View {
             bitmap.recycle();
         }
     }
-
 }

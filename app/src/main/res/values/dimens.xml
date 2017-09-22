@@ -7,6 +7,7 @@
     <dimen name="nav_header_height">160dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="grid_4">99dp</dimen>
+    <dimen name="screen_width">412dp</dimen>
     <dimen name="divide_3">120dp</dimen>
     <dimen name="textView">20dp</dimen>
 </resources>

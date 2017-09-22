@@ -4,6 +4,7 @@ import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.content.res.Configuration;
+import android.graphics.Rect;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -18,8 +19,8 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.FrameLayout;
 import android.widget.RadioButton;
+import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -35,6 +36,23 @@ public class activity_edit extends AppCompatActivity
     int down_y = 0;
     int up_x = 0;
     int up_y = 0;
+    Rect rect11 = new Rect();
+    Rect rect12 = new Rect();
+    Rect rect13 = new Rect();
+    Rect rect14 = new Rect();
+    Rect rect21 = new Rect();
+    Rect rect22 = new Rect();
+    Rect rect23 = new Rect();
+    Rect rect24 = new Rect();
+    Rect rect31 = new Rect();
+    Rect rect32 = new Rect();
+    Rect rect33 = new Rect();
+    Rect rect34 = new Rect();
+    Rect rect41 = new Rect();
+    Rect rect42 = new Rect();
+    Rect rect43 = new Rect();
+    Rect rect44 = new Rect();
+    int checked_cell = 41;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,9 +74,9 @@ public class activity_edit extends AppCompatActivity
         Configuration config = getBaseContext().getResources().getConfiguration();
 
         //use the canvas saved in SharedPreferences
-        SharedPreferences pref = getSharedPreferences("test",0);
+        SharedPreferences pref = getSharedPreferences("test",0);    //create a new file to save
         Editor editor = pref.edit();
-        RadioButton c1_1;
+        final RadioButton c1_1;
         RadioButton c1_2;
         RadioButton c1_3;
         RadioButton c1_4;
@@ -125,14 +143,30 @@ public class activity_edit extends AppCompatActivity
         currentCell = (RadioButton) findViewById(R.id.c4_4);
         currentColor = 0xffffffff;
 
+        /*c1_1.getHitRect(rect11);
+        c1_2.getHitRect(rect12);
+        c1_3.getHitRect(rect13);
+        c1_4.getHitRect(rect14);
+        c2_1.getHitRect(rect21);
+        c2_2.getHitRect(rect22);
+        c2_3.getHitRect(rect23);
+        c2_4.getHitRect(rect24);
+        c3_1.getHitRect(rect31);
+        c3_2.getHitRect(rect32);
+        c3_3.getHitRect(rect33);
+        c3_4.getHitRect(rect34);
+        c4_1.getHitRect(rect41);
+        c4_2.getHitRect(rect42);
+        c4_3.getHitRect(rect43);
+        c4_4.getHitRect(rect44);*/
+
 
         //create a pen
-        FrameLayout frame = (FrameLayout) findViewById(R.id.canvas);
+        RelativeLayout frame = (RelativeLayout) findViewById(R.id.canvas);
         final penView ic_pen = new penView(activity_edit.this);
         ic_pen.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent event) {
-
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
                         //where to start
@@ -140,8 +174,12 @@ public class activity_edit extends AppCompatActivity
                         down_y = (int)event.getY();
                         break;
                     case MotionEvent.ACTION_MOVE:
-                        ic_pen.bitmapX = Math.round(event.getX() -   1) - down_x + up_x;
-                        ic_pen.bitmapY = Math.round(event.getY() - 128) - down_y + up_y;
+                        ic_pen.bitmapX = Math.round(event.getX()) - down_x + up_x;
+                        ic_pen.bitmapY = Math.round(event.getY()) - down_y + up_y;
+                        if (rect11.contains((int) event.getX(), (int) event.getY())) {
+                            checked_cell = 11;
+                            c1_1.setChecked(true);
+                        }
                         ic_pen.invalidate();
                         break;
                     case MotionEvent.ACTION_UP:
@@ -176,7 +214,6 @@ public class activity_edit extends AppCompatActivity
     }
 
     public static final int TAKE_PHOTO = 1;
-    //private GridLayout Canvas = (GridLayout) findViewById(R.id.canvas);
     private Uri imageUri;
     private String filename;
 
@@ -416,14 +453,85 @@ public class activity_edit extends AppCompatActivity
                     CellName = "c4_4";
                 break;
         }
-    }
+    }/*
 
+    public void cell(View view) {
 
+        // Check which cell was clicked
+        switch(checked_cell) {
+            case 11:
+                currentCell =(RadioButton) findViewById(R.id.c1_1);
+                CellName = "c1_1";
+                break;
+            case 12:
+                currentCell =(RadioButton) findViewById(R.id.c1_2);
+                CellName = "c1_2";
+                break;
+            case 13:
+                currentCell =(RadioButton) findViewById(R.id.c1_3);
+                CellName = "c1_3";
+                break;
+            case 14:
+                currentCell =(RadioButton) findViewById(R.id.c1_4);
+                CellName = "c1_4";
+                break;
+
+            case 21:
+                currentCell =(RadioButton) findViewById(R.id.c2_1);
+                CellName = "c2_1";
+                break;
+            case 22:
+                currentCell =(RadioButton) findViewById(R.id.c2_2);
+                CellName = "c2_2";
+                break;
+            case 23:
+                currentCell =(RadioButton) findViewById(R.id.c2_3);
+                CellName = "c2_3";
+                break;
+            case 24:
+                currentCell =(RadioButton) findViewById(R.id.c2_4);
+                CellName = "c2_4";
+                break;
+
+            case 31:
+                currentCell =(RadioButton) findViewById(R.id.c3_1);
+                CellName = "c3_1";
+                break;
+            case 32:
+                currentCell =(RadioButton) findViewById(R.id.c3_2);
+                CellName = "c3_2";
+                break;
+            case 33:
+                currentCell =(RadioButton) findViewById(R.id.c3_3);
+                CellName = "c3_3";
+                break;
+            case 34:
+                currentCell =(RadioButton) findViewById(R.id.c3_4);
+                CellName = "c3_4";
+                break;
+
+            case 41:
+                currentCell =(RadioButton) findViewById(R.id.c4_1);
+                CellName = "c4_1";
+                break;
+            case 42:
+                currentCell =(RadioButton) findViewById(R.id.c4_2);
+                CellName = "c4_2";
+                break;
+            case 43:
+                currentCell =(RadioButton) findViewById(R.id.c4_3);
+                CellName = "c4_3";
+                break;
+            case 44:
+                currentCell =(RadioButton) findViewById(R.id.c4_4);
+                CellName = "c4_4";
+                break;
+        }
+    }*/
 
     public void pens(View view) {
         // Is the button now checked?
         boolean checked = ((RadioButton) view).isChecked();
-
         // Check which radio button was clicked
         switch(view.getId()) {
             case R.id.pen_1:
@@ -493,7 +601,7 @@ public class activity_edit extends AppCompatActivity
         }
     }
 
-    /*Typeface pixelFont = Typeface.createFromAsset(getAssets(),"/font/Pixel.ttf");
+    /*Typeface pixelFont = Typeface.createFromAsset(getAssets(),"font/Pixel.ttf");
     Button txt = (Button) findViewById(R.id.Btndot);
     txt.setTypeface(pixelFont);*/
     public void dot(View view){
