@@ -17,10 +17,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.RadioButton;
-import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -160,7 +158,9 @@ public class activity_edit extends AppCompatActivity
         c4_3.getHitRect(rect43);
         c4_4.getHitRect(rect44);*/
 
-
+        /*
+        //--------------------Delete this to see choose cell by clicking-------------------
+        //                     Use this to see floating pen
         //create a pen
         RelativeLayout frame = (RelativeLayout) findViewById(R.id.canvas);
         final penView ic_pen = new penView(activity_edit.this);
@@ -191,6 +191,7 @@ public class activity_edit extends AppCompatActivity
             }
         });
         frame.addView(ic_pen);
+        //-------------------------------------------------------------------------------------*/
     }
 
     @Override
